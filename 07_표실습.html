@@ -1,8 +1,37 @@
 <!DOCTYPE html>
-<html lang = "ko">
+<html lang = "en">
     <head>
         <title>음식가게</title>
         <meta charset="UTF-8">
+        <style>
+            th {
+                background-color: coral;
+            }
+        </style>
+        <!--
+            코드에서 스타일을 입힐 때
+
+            <tr  style="background-color: rosybrown;">
+            와 같이 각각의 코드 안에서 style을 작성해주는 것 보다
+            
+            <style>
+                th {
+                    background-color: coral;
+                }
+            </style>
+            와 같이 <head> 아래에 <style>이라는 태그를 만들어서
+            내가 한번에 꾸미고자 하는 태그 이름<th>과 꾸밀 내용을 {}안에 작성해 주는 것이 더 강력하게 작용함
+
+            처음 코드는 rosybrown인데 style에 {}로 coral로 정해주니까 색이 coral로 바뀜
+
+
+            만약 <th>와 <td> 모두 coral로 만들어 주고 싶다면 아래 코드로 바꿔주면 됨
+            <style>
+                th, td {
+                    background-color: coral;
+                }
+            </style>
+        -->
     </head>
     <body>
         <h1>메뉴판</h1>
@@ -37,6 +66,50 @@
             <tr>
                 <td>음료수</td>
                 <td>2,000원</td>
+            </tr>
+        </table>
+
+        <hr>
+        <h2>게시판</h2>
+        <ul>
+            <li>
+                <h3>게시물 제목 1</h3>
+                <p>
+                    작성자 : 사용자1<br>
+                    작성일 : 2024-05-07<br>
+                    내용 : 이 게시물은 첫 번째 게시물입니다.<br>
+                </p>
+            </li>
+            <li>
+                <h3>게시물 제목 2</h3>
+                <p>
+                    작성자 : 사용자2<br>
+                    작성일 : 2024-05-08<br>
+                    내용 : 이 게시물은 두 번째 게시물입니다.<br>
+                </p>
+            </li>
+        </ul>
+
+        <hr>
+        <h2>게시물 목록(테이블)</h2>
+        <table border="1" style="width: 100%; border-collapse: collapse;">
+            <tr style="background-color: rosybrown;">
+                <th>게시물 제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>내용</th>
+            </tr>
+            <tr>
+                <td>게시물 제목 1</td>
+                <td>사용자1</td>
+                <td>2024-05-07</td>
+                <td>이 게시물은 첫 번째 게시물입니다.</td>
+            </tr>
+            <tr>
+                <td>게시물 제목 2</td>
+                <td>사용자2</td>
+                <td>2024-05-08</td>
+                <td>이 게시물은 두 번째 게시물입니다.</td>
             </tr>
         </table>
     </body>
