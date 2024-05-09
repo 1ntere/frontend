@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>iframe 예제</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h2>iframe 사용하기</h2>
+        <pre>
+    iframe : 웹페이지나 웹에 있는 정보를 포함해서 보여주는 태그
+    사용을 하는데 불편한 부분이 많기 때문에
+    html5 부터는 사용을 많이 하진 않음
+    html 을 포함해서 보여주기도 함
+
+    src="           : 불러올 위치 설정
+    width=""        : 가로길이 지정
+    height=""       : 세로길이 지정
+    frameborder=""  : 테두리 지정, 0으로 설정하면 테두리 없음
+        </pre>
+
+        <pre>
+    iframe의 경우 외부에서 태그해서 볼 수 없도록 지정해 놓으면
+    엑스박스로 되면서 홈페이지에서 연결을 거부했습니다. 가 표시됨
+    외부에서 볼 수 있도록 지정해 놓으면
+    html에서 src로 불러온 홈페이지를 볼 수 있음
+        </pre>
+        <iframe src="15_비디오관련태그.html" width="600px" height="450px" frameborder="1"></iframe>
+        <!--
+            20_iframe태그.html 파일을 크롬에서 실행시키면 그 안에 15_비디오관련태그.html이 실행됨
+        -->
+        <iframe src="https://www.naver.com" width="600px" height="450px" frameborder="1"></iframe>
+        <iframe src="https://google.com" width="600px" height="450px" frameborder="1"></iframe>
+        <!--
+            naver와 google은 iframe으로 외부에서 태그해서 볼 수 없도록 지정이 되어 있기 때문에
+            볼 수 없음
+        -->
+    </body>
+</html>
