@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- html 5 버전 확인-->
+<!-- 자동줄바꿈 단축키 : alt + shift + f -->
+<html lang="ko">
+  <!-- 
+    검색 엔진에서 한글로 보길 원한다면 ko
+    영어로 보길 원한다면 en
+    -->
+  <head>
+    <!-- 화면에 보이지는 않지만 사이트의 정보를 담는 공간 meta, title, style 등등-->
+    <meta charset="UTF-8" />
+    <title>이미지 관련 태그</title>
+  </head>
+  <body>
+    <h1>이미지 태그 img</h1>
+    <pre>
+             - 웹 문서에 사진이나 그림 같은 이미지를 삽입하는 용도의 태그
+
+             [속성]
+             (속성 : 태그에 작성하는 내용)
+
+            1. src       : 삽입할 이미지의 경로를 작성하는 속성
+                          (파일 위치, 인터넷 주소 = 이미지를 가져올 수 있는 경로)
+            2. width     : 가로 길이를 지정해주는 속성 (필수 x)
+            3. height    : 세로 길이를 지정해주는 속성 (필수 x)
+            4. alt       : 이미지의 설명을 작성하는 속성
+                          이미지가 보이지 않을 때 이미지 대신에 화면에 출력되는 그림
+                          + 이미지 설명을 읽어주는 역할 
+        </pre
+    >
+    
+    <h2>인터넷에서 이미지를 가져와서 출력하기</h2>
+    <img
+      src="data:image/jpeg;base64,/9j/4AQgCqJ5/zqhCQWn7e+SuiAEz1/wBJ8jChCFiP//Z"
+      alt="이미지 깨짐"
+    />
+    <br />
+    <!--
+        src 를 입력할 때
+        http로 시작하지 않는 이미지는 주소로 가져올 수 없음
+    -->
+    <img
+      src="https://jjal.today/data/file/gallery/1890235605_sMTZRaUd_245aee3e158738c9b04299ade4846a8554bd4212.gif" width="300px"
+    />
+    <br />
+    <!--
+        https가 앞부분에 있으므로 src를 통해 이미지(gif도 가능)의 주소를 가져올 수 있음
+    -->
+
+    <img
+      src="https://jjal.today/data/file/gallery/1890235605_CV73r1G2_62de52e67b9fb56d3ea3c0e723e322a6a50463c8.jpeg"
+      width="300px"
+      height="200px"
+    />
+    <br />
+    <!--
+        이미지 크기를 조정할 때
+        width   가로 길이를 설정해주는데 보통 px나 %를 많이 사용
+        height  세로 길이를 설정해주는데 보통 px나 %를 많이 사용
+    -->
+
+    <h2>이미지 절대 경로로 출력하기</h2>
+    <pre>
+        절대 경로 : 변하지 않는 기준점으로부터 목표까지의 경로를 나타낸 것
+        (서울특별시 중구 필동로 1길 30)
+
+        - 윈도우에서는 C드라이브 or D드라이브가 기준 (서울특별시)
+    </pre>
+    <img src="C:/Users/user1/frontend-workspace/html/이미지들/swimmingPartyMarley.jpg" width="300px"/>
+    <!-- 
+        이미지를 절대 경로로 가지고 올때 Preview에서는 이미지가 제대로 보이지 않을 수 있음
+        그 때는 html 파일을 크롬으로 실행시켜서 이미지가 제대로 들어가 있는지 확인
+
+        이미지 경로를 복사한 후 붙여 넣을 때 경로가 \(역슬래쉬)로 나올텐데 /(슬래쉬)로 바꿔주면 됨
+        윈도우에서는 \(역슬래쉬)로 되어있어도 문제는 없지만
+        Mac이나 리눅스 환경에서는 이미지 경로로 쓸 수 없기 때문에 /(슬래쉬)로 바꿔서 쓴다
+     -->
+    <!--
+        ★ 오류 발생
+        이미지를 절대경로로 출력하면 이미지가 Preview에서 보이지 않는다.
+        ★ 원인
+        C:\Users\user1\frontend-workspace\html\이미지들\swimmingPartyMarley.jpg
+        ★ 해결 방안
+        1. \(역슬래쉬) 를 /(슬래쉬) 로 바꿔준다
+        2. html 파일을 크롬에서 실행시켜준다
+        바꿔주는 이유는 윈도우에서는 상관이 없는데
+        Mac이나 리눅스 환경에서는 이미지 경로로 사용할 수 없기 때문
+    -->
+    <br />
+    <img src="C:/Users/user1/frontend-workspace/html/이미지들/healing.jpg" width="300px"/>
+    <br />
+
+    <h2>상대 경로로 이미지 출력하기</h2>
+    <pre>
+        상대 경로 : 현재 파일/페이지 위치를 기준으로 목표까지의 경로를 나타낸 것
+    </pre>
+    <img src="이미지들/hogam.jpg" width="300px"/>
+
+    <hr>
+    <h2>고정 크기 단위(px) : 항상 고정된 크기를 지님</h2>
+    <img src="이미지들/healing.jpg" width="300px" height="240px">
+    <br>
+    
+    <!-- 파자마말리를 절대경로 / 러블리말리를 상대경로로 가져오기 -->
+    <img src="C:/Users/user1/frontend-workspace\html/이미지들/pajamaMarley.jpg"
+    width="500px"
+    height="500px"
+    />
+    <br />
+    <img src="이미지들/lovelyMarley.jpg"
+    width="400px"
+    height="300px"
+    />
+    <br />
+  </body>
+</html>

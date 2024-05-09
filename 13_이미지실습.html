@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>과일 나라</title>
+        <style>
+            img {
+                width: 100px;
+            }
+            /*
+            style 안에 img 작성 후 {} 안에 적용하고 싶은 style을 작성해주면
+            html 안에 있는 모든 img에 style이 적용됨
+            */
+
+            table {
+                border-collapse: collapse;
+            }
+
+            th, td {
+                border: 1px solid violet;
+                text-align: center;
+                padding: 10px;
+            }
+            /*
+            border: 1px solid violet;
+            border : 테두리 지정
+                1px : 테두리 사이즈 지정
+                    숫자가 커질수록 테두리 사이즈도 커짐
+                solid : 일반적으로 라인을 그려주는 테두리
+                violet : 테두리 색상 지정
+            
+            padding: 20px;
+            padding : 상하좌우에 동일하게 20px의 공백을 줌
+            */
+
+            th {
+                background-color: violet;
+                color: white;
+            }
+            /*
+            style에서는 똑같은 태그를 여러 번 불러와서 설정 가능
+            , 를 이용하지 않을 때는 단독 태그가 고유 스타일을 갖길 원할 때 작성
+            , 를 이용해서 작성할 때는 여러 태그를 동일한 속성으로 작성해줄 때 사용
+            */
+        </style>
+    </head>
+    <body>
+        <h2>과일 가격표</h2>
+        <table>
+            <tr>
+                <th>과일</th>
+                <th>가격</th>
+                <th>이미지</th>
+            </tr>
+            <tr>
+                <td>사과</td>
+                <td>1,000원</td>
+                <td><img src="https://img.freepik.com/free-photo/delicious-red-apples-studio_23-2150811025.jpg?t=st=1715219146~exp=1715222746~hmac=f1603530aaac4c1a05df0cdeb4d8ac23f5fee2519ca089275ef094bafa6dfa53&w=740" alt="사과"></td>
+            </tr>
+            <tr>
+                <td>바나나</td>
+                <td>800원</td>
+                <td><img src="https://img.freepik.com/free-vector/vector-ripe-yellow-banana-bunch-isolated-white-background_1284-45456.jpg?t=st=1715219174~exp=1715222774~hmac=349f4c4121a42e61759722ad64e4013f20a775f3c63f409f1f33c5170e5f2df1&w=996" alt="바나나"></td>
+            </tr>
+            <tr>
+                <td>딸기</td>
+                <td>1,500원</td>
+                <td><img src="https://img.freepik.com/free-photo/strawberries-cut-half-whole-berries-ripe-berries-top-view-background-ripe-strawberries-delicious-natural-dessert_166373-2358.jpg?t=st=1715219198~exp=1715222798~hmac=097cec17471811838fdb9eaffed73cff5879098d7f62d8fc3d4812a4259df674&w=740" alt="딸기"></td>
+            </tr>
+        </table>
+    </body>
+</html>
