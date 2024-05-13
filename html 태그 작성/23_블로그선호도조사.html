@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>블로그 선호도 조사</title>
+        <style>
+            body {
+                background-color: aliceblue;
+                margin: 0 auto;
+                padding: 20px;/*상하좌우 20px씩 공간을 만들어줌*/
+            }
+
+            .컨테이너 {
+                width: 70%;
+                margin: 0 auto;
+                background-color: white;
+                padding: 20px;
+                box-shadow: 0 0 15px rgb(10, 124, 224);
+                border-radius: 10px;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            button {
+                margin: 0 auto;
+                text-align: center;
+                display: block;
+                background-color: antiquewhite;
+                color: black;
+                padding: 10px 20px;
+                    /* 위, 아래는 10px, 좌, 우는 20px로 padding하기 */
+                border-radius: 5px;
+                border: none;
+                    /* 테두리를 없앰 */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="컨테이너">
+            <h1>블로그 선호도 조사</h1><br>
+            <form>
+                <label>
+                    <input type="radio" name="선호도" value="맛집">
+                    맛집
+                </label><br>
+
+                <label>
+                    <input type="radio" name="선호도" value="투자">
+                    투자
+                </label><br>
+
+                <label>
+                    <input type="radio" name="선호도" value="재테크">
+                    재테크
+                </label>
+                <br><br><br>
+
+                <label>
+                    <input type="checkbox" name="구독방법" value="뉴스레터">
+                    뉴스레터
+                </label>
+
+                <label>
+                    <input type="checkbox" name="구독방법" value="메일수신">
+                    메일수신
+                </label>
+                <br>
+
+                <br>
+                <button type="submit">제출하기</button>
+                
+            </form>
+        </div>
+    </body>
+</html>

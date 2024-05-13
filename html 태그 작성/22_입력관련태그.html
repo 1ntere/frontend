@@ -17,6 +17,8 @@
     3. name                : 자바스크립트에서 사용, form의 이름을 지정하는 속성
     4. target              : 제출된 페이지를 현재 또는 새 탭으로 열기 설정
         </pre>
+        <hr>
+
         <h3> input 태그 </h3>
         <pre>
     - 웹 문서에서 사용자가 입력할 수 있는 양식을 제공해주는 태그
@@ -30,7 +32,7 @@
     ★★★★★
     type 속성 -> 환경에 맞게 설정
     type 종류
-        type     : 한 줄 텍스트 입력 상자(기본값)
+        text     : 한 줄 텍스트 입력 상자(기본값)
         password : 비밀번호 입력 상자(모자이크 처리)
         url      : 주소 설정
         search   : 검색 기능
@@ -41,7 +43,7 @@
         숫자
         number   : 숫자만 입력 가능한 상자
         range    : 슬라이드바를 이용해서 숫자 지정(단독 사용x 자바스크립트랑 같이 사용)
-            - min(최소값), max(최대값) step(숫자가 증가 / 감소 하는 단계) value(기본값 설정)
+            - min(최소값), max(최대값), step(숫자가 증가 / 감소 하는 단계), value(기본값 설정)
         
         날짜
         date / month / week / time / datetime-local
@@ -59,7 +61,13 @@
             name 안에 변수명을 작성할 때는 속성이나 예약어는 피해서 작성할 것
             name = id만 단독으로 작성하면 id 속성과 혼동이 올 수 있음
             name = user_id, member_id처럼 사용하기
+
+        placeholder : 
+
+
+
         </pre>
+        <hr>
 
         <h3> label 태그 </h3>
         <pre>
@@ -72,16 +80,97 @@
     <label for="id">아이디</label>
     <input type="text" name="id"><br>
         </pre>
+        <hr>
 
+        <h3>radio checkbox</h3>
+        <pre>
+    여러 연관된 값을 묶어서 선택하는 경우 사용
+    radio : 여러 값 중 하나만 선택
+            한 가지를 선택하면 다른 것은 선택 못 함
+            ex. 성별
+    checkbox : 여러 값 중 원하는 모든 것을 선택
+            한 가지를 선택해도 다른 것을 선택할 수 있음
+            ex. 상세검색, 관심분야, 취미
+    <strong style="color: red;">
+    연관된 radio, checkbox는 같은 name 속성 값을 가져야 함
+    </strong>
+
+    [radio, checkbox의 추가 속성]
+    value : 선택되었을 때 제출할 값을 작성하는 속성
+    checked : 체크가 되어있게 하는 속성
+        </pre>
+
+        <hr>
         <form>
             아이디 :  <input type="text" name="user_id"><br>
             비밀번호 : <input type="password" name="pw"><br>
                 <!--*로 출력됨-->
             이메일 : <input type="email" name="email"><br>
+            <hr>
             숫자 : <input type="number" name="num"><br>
                 <!--e빼고 모든 글자 사용하지 못 함-->
             range : <input type="range" min="10" max="100" step="1" value="50"><br>
                 <!--range를 직접 마우스로 옮겨서 값을 바꿨을 때는 자바스크립트가 연결되어 있지 않으면 해당 값을 모름-->
         </form>
+
+        <hr>
+        <h4>날짜 / 시간 관련 input 태그</h4>
+        <ul>
+            <li><input type="date"></li><!-- 연도-월-일 -->
+            <li><input type="month"></li><!-- yyyy년 MM월 -->
+            <li><input type="week"></li><!-- yyyy, --번째 주 -->
+            <li><input type="time"></li><!-- 오전/오후 HH : mm -->
+            <li><input type="datetime-local"></li><!-- 연도-월-일 오전/오후 HH : mm -->
+        </ul>
+        
+        <hr>
+        <h4>radio 확인</h4>
+        <input type="radio" name="동물">강아지
+        <br>
+        <input type="radio" name="동물">고양이
+        <br>
+        <input type="radio" name="동물">사자
+        <br>
+
+        <hr>
+        <h4>checkbox 확인</h4>
+        <p>내가 좋아하는 색상 고르기</p>
+        <input type="checkbox" name="색상">빨강
+        <br>
+        <input type="checkbox" name="색상">노랑
+        <br>
+        <input type="checkbox" name="색상">초록
+        <br><br>
+
+        <hr>
+        <h4>radio와 checkbox에 value와 checked 넣어보기</h4>
+        <input type="radio" name="팀" value="A팀 선택했음" checked>A팀
+            <!--checked 때문에 사용자가 선택하지 않아도 A팀이 미리 선택되어있음-->
+            <!--checked는 1개만 가능-->
+            <!--A팀을 선택하면 나한테 A팀 선택했음이 반환됨-->
+        <input type="radio" name="팀" value="B팀 선택했음">B팀
+            <!--A팀을 선택하면 나한테 A팀 선택했음이 반환됨-->
+        
+        <hr>
+        <input type="checkbox" name="취미" value="수영" checked>수영
+        <input type="checkbox" name="취미" value="독서" checked>독서
+        <input type="checkbox" name="취미" value="잠자기" checked>잠자기
+
+        <hr>
+        <h3>button 태그</h3>
+        <pre>
+    버튼을 만드는 태그
+    
+    type 속성 값에 따라 동작이 달라짐
+        type="submit"
+            type에서 submit을 작성하게 되면 form을 제출하는 버튼을 만들 때 제출하겠다는 의미
+            button에서 type을 지정해주지 않으면 기본으로 submit 지정
+
+        type="reset"
+            작성된 모든 값을 초기화
+        
+        type="button"
+            버튼 동작을 개발자가 만들고자 할 때 사용
+        </pre>
     </body>
 </html>
