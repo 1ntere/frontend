@@ -5,10 +5,10 @@
         <title>블로그 설문조사</title>
         <style>
             body {
-                background-color: #ccc;
+                background-color: #f0f0f0;
             }
             .컨테이너 {
-                width: 70%;
+                width: 60%;
                 margin: 0 auto;
                 text-align: center;
                 background-color: white;
@@ -19,7 +19,7 @@
                 background-color: #4CAF50;
                 color: white;
                 border: none;
-                border-radius: 3px;
+                border-radius: 5px;
                 padding: 10px 20px;
             }
             input {
@@ -30,17 +30,25 @@
     <body>
         <div class="컨테이너">
             <h1>블로그 설문조사</h1>
-            <p>이름:</p>
-            <input type="text" name="이름">
-            <p>이메일:</p>
-            <input type="email" name="이메일">
-            <p>나이:</p>
-            <input type="number" name="나이">
-            <p>의견:</p>
-            <input type="text" name="의견">
+            <form>
+                <label>이름 : <br><br>
+                    <input type="text">
+                </label>
+                <br><br>
+                <label>이메일 : <br><br>
+                    <input type="text">
+                </label>
+                <br><br>
+                <label>나이 : <br><br>
+                    <input type="number">
+                </label>
+                <br><br>
+                <label>의견 : <br><br>
+                    <input type="text">
+                </label>
+                <br>
+            </form>
             <br><br>
-
-
             <form>
                 <button type="submit">제출</button>
             </form>
