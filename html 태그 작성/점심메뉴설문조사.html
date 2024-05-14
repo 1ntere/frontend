@@ -11,7 +11,7 @@
                 width: 200px;
                 height: 200px;
             }
-            .피자종류 {
+            .피자종류, 음료 {
                 margin: 0 auto;
                 text-align: center;
                 display: block;
@@ -34,6 +34,10 @@
                 border: none;
                 padding: 10px 20px;
                 border-radius: 5px;
+            }
+            .icon {
+                width: 30px;
+                height: 30px;
             }
         </style>
     </head>
@@ -73,9 +77,18 @@
             </div><br>
             <div class="음료">
                 <label>음료 선택 : </label>
-                <input type="checkbox">콜라
-                <input type="checkbox">사이다
-                <input type="checkbox">맥주
+                <label for="콜라">
+                    <input id="콜라" type="checkbox">
+                    <img src="../이미지들/콜라.png">
+                </label>
+                <label for="사이다">
+                    <input id="사이다" type="checkbox">
+                    <img src="">
+                </label>
+                <label for="맥주">
+                    <input id="맥주" type="checkbox">
+                    <img src="../이미지들/맥주.png">
+                </label>
             </div><br>
             <div class="주소">
                 <label>배달 주소 : </label><br>
@@ -85,6 +98,9 @@
             </div><br>
             <button>주문하기</button>
         </form>
+        <a class="icon" href="../html실습/홈페이지메인.html">
+            <img src="../html실습/홈페이지아이콘.png">
+        </a>
         </div>
     </body>
 </html>
