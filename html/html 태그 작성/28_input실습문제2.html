@@ -17,7 +17,32 @@
             <label>3. 홈페이지 : </label>
             <input type="text" value="http://">
             <br>
-            
+
+            <label>4. 지역 : </label>
+            <select>
+                <option>부산</option>
+            <br>
+
+            <ul>
+                <li>
+                    <label>상품명 : </label>
+                    <input type="text" name="productName">
+                </li>
+                <li>
+                    <label>납품수량 : </label>
+                    <input type="text" name="amount" placeholder="최소 100">
+                </li>
+                <li>
+                    <label>납품등급 : </label>
+                    <input type="range" min="1" max="5" name="grade">
+                </li>
+                <li>
+                    <label>기타사항 : </label>
+                    <textarea name="etc" rows="5" cols="20"></textarea>
+                </li>
+                <button>send message</button>
+            </ul>
+
         </form>
 
     </body>
