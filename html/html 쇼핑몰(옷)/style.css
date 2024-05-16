@@ -1,0 +1,8 @@
+body {
+    background-color: #f6f6f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif'
+}
+.제품사진 img {
+    width: 100%
+        /*사진의 넓이를 현재 창의 100% 수준으로 고정됨, 창의 넓이를 넓히면 이미지도 커짐*/
+}
