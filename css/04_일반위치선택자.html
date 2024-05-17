@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>일반 위치 선택자</title>
+    </head>
+    <body>
+        <h1>일반적인 위치나 구조를 나타내는 선택자</h1>
+        <pre>
+    형제 관계에 있는 태그들 중에서 특정 태그만 선택하는 선택자
+
+    선택하는 기준을 통해 위치를 구분함
+
+    <div class="형제">
+        <div class="A"></div>
+        <div class="B"></div>
+    </div>
+    만약에 A라는 변수명을 선택하면 div 태그를 선택한 것이 아님
+
+    A : first-child
+        형제 중 가장 첫 번째가 A
+    B : last-child
+        형제 중 가장 마지막 번째가 B
+    
+    <div class="형제들">
+        <div class="일"></div>
+        <div class="이"></div>
+        <div class="삼"></div>
+        <div class="사"></div>
+    </div>
+    일 : nth-child(1)
+        형제들 중 첫 번째가 일
+    이 : nth-child(2)
+        형제들 중 두 번째가 이
+    삼 : nth-child(3)
+        형제들 중 세 번째가 삼
+    사 : nth-child(4)
+        형제들 중 네 번째가 사
+
+
+    만약에 태그 옆에 class나 id가 없다면 태그명을 작성해줘도 됨
+    <div class="아이들">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    .아이들 > div:nth-child(1) {}
+        아이들 태그 안에서 가장 첫 번째 작성된 div 태그를 선택
+    .아이들 > div:nth-child(2) {}
+        아이들 태그 안에서 두 번째 작성된 div 태그를 선택
+    .아이들 > div:nth-child(3) {}
+        아이들 태그 안에서 세 번째 작성된 div 태그를 선택
+
+    만약에 중간 자식들은 건너뛰고 맨 마지막에 있는 자식만 꾸며주고 싶다면
+    .아이들 > div:last-child {}
+        first-child, last-child, nth-child()를 섞어서 사용 가능
+        </pre>
+    </body>
+</html>
