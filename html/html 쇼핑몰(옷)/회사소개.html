@@ -9,20 +9,129 @@
                 margin: 0;
                 padding: 0;
             }
-            header {
-                background-color: aliceblue;
+            header, footer {
+                background-color: antiquewhite;
                 text-align: center;
                 padding: 20px;
             }
             nav {
-                background-color: aliceblue;
+                background-color: antiquewhite;
                 padding: 15px;
                 text-align: center;
             }
             nav a {
                 text-decoration: none;
-                color: rgba(0, 0, 255, 0.562);
+                color: rgba(165, 42, 42, 0.678);
             }
+
+            /* main */
+            main {
+                width:80%;
+                margin: 20px auto;
+            }
+            .회사섹션 {
+                display: block;
+                /* 한 section이 끝날 때 마다 밑으로 간격을 20px 준 것 */
+                margin-bottom: 20px;
+            }
+            .회사섹션 .블록 {
+                border : 2px solid #ccc;
+                margin-bottom: 20px;
+                padding: 20px;
+            }
+            .회사섹션 .블록 img {
+                width: 100%;
+                height: 100%;
+            }
+
+            /*만약 회사역사가 들어있는 칸 배경 색을 바꾸고 싶다면*/
+            .회사섹션 .블록:first-child {
+                background-color: rgba(250, 235, 215, 0.493);
+            }
+            .회사섹션 .블록:last-child {
+                background-color: rgba(250, 235, 215, 0.493);
+            }
+
+            /* 팀원 소개 섹션 */
+            .팀섹션 {
+                /* 가로 중앙 정렬을 위한 style */
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            .팀섹션 .멤버 {
+                /* 세로로 나누어져 있는 div를 가로로 배치 */
+                display: inline-block;
+                    /*
+                    ★ inline-block을 사용하는 이유
+                    display에서 inline을 사용할 경우
+                    가로 길이 설정 x
+                    display에서 inline-block을 사용할 경우
+                    가로 길이 설정 o
+                     */
+                width: 20%;
+                padding: 15px;
+                background-color: antiquewhite;
+                border: 2px solid #f2f2f2;
+            }
+            .팀섹션 .멤버 img {
+                width: 100px;
+                border-radius: 50%;
+            }
+
+            /* 
+            팀섹션 기준으로
+            h2 또한 자식이기 때문에
+            <h2>팀 소개</h2>가 .팀섹션 .멤버:nth-child(1)이 됨
+            */
+            .팀섹션 .멤버:nth-child(2) {
+                background-color: rgba(163, 94, 62, 0.726);
+            }
+            .팀섹션 .멤버:nth-child(3) {
+                background-color: rgba(1, 62, 102, 0.493);
+            }
+            .팀섹션 .멤버:nth-child(4) {
+                background-color: rgba(47, 79, 79, 0.308);
+            }
+            .팀섹션 .멤버:nth-child(5) {
+                background-color: rgba(170, 179, 179, 0.308);
+            }
+
+            /*
+            :hover
+            마우스가 태그 안에 도착하면 나타날 스타일
+
+            + 모든 숫자에 동일한 디자인을 적용하길 원한다면
+            .팀섹션 .멤버:nth-child(n):hover {}
+             */
+            .팀섹션 .멤버:nth-child(2):hover {
+                background-color: rgb(163, 94, 62);
+                color: white;
+                font-weight: bold;
+                text-shadow: 0 0 15px white;
+                /*
+                box-shadow: 0 0 15px white;
+                테두리가 없기 때문에 사용 불가
+                */
+            }
+            .팀섹션 .멤버:nth-child(3):hover {
+                background-color: rgb(1, 62, 102);
+                color: white;
+                font-weight: bold;
+                text-shadow: 0 0 15px white;
+            }
+            .팀섹션 .멤버:nth-child(4):hover {
+                background-color: rgb(47, 79, 79);
+                color: white;
+                font-weight: bold;
+                text-shadow: 0 0 15px white;
+            }
+            .팀섹션 .멤버:nth-child(5):hover {
+                background-color: rgb(170, 179, 179);
+                color: white;
+                font-weight: bold;
+                text-shadow: 0 0 15px white;
+            }
+
         </style>
     </head>
     <body>
@@ -35,9 +144,10 @@
             <a href="#">회사연락처</a>
         </nav>
         <main>
-            <section>
+            <section class="회사섹션">
                 <div class="블록">
                     <h2>회사 역사</h2>
+                    <img src="이미지/직물공장.jpg">
                     <p>
                         우리 회사는 2000년대 동대문에서 설립되어<br>
                         현재까지 혁신적인 제품과 서비스를 제공하고 있습니다.<br>
@@ -53,6 +163,32 @@
                     </p>
                 </div>
             </section>
+            <section class="팀섹션">
+                    <h2>팀 소개</h2>
+                    <div class="멤버">
+                        <img src="이미지/공유.jpg" alt="김신">
+                        <h3>김신</h3>
+                        <p>디자인 경력 28년</p>
+                    </div>
+                    <div class="멤버">
+                        <img src="이미지/이동욱.jpg" alt="저승이">
+                        <h3>저승이</h3>
+                        <p>해외 디자이너</p>
+                    </div>
+                    <div class="멤버">
+                        <img src="이미지/김고은.jpg" alt="지은탁">
+                        <h3>지은탁</h3>
+                        <p>PD : Personal Director</p>
+                    </div>
+                    <div class="멤버">
+                        <img src="이미지/유인나.PNG" alt="김선">
+                        <h3>김선</h3>
+                        <p>컨텐츠 디자이너</p>
+                    </div>
+            </section>
         </main>
+        <footer>
+            <p>&copy; 2024 쇼핑몰 All rights reserved.</p>
+        </footer>
     </body>
 </html>
